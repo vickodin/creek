@@ -45,7 +45,7 @@ module Creek
         when 's' # shared string
           options[:shared_strings][value.to_i]
         when 'n' # number
-          value.to_f
+          value.to_i.to_s == value.to_s ? value.to_i : value.to_f
         when 'b'
           value.to_i == 1
         when 'str'
