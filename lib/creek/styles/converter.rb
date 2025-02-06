@@ -65,7 +65,7 @@ module Creek
         when :fixnum
           value.to_i
         when :float, :percentage
-          value.to_f
+          value.to_i.to_s == value.to_s ? value.to_i : value.to_f
         when :date
           convert_date(value, options)
         when :time, :date_time
