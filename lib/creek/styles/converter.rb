@@ -110,7 +110,7 @@ module Creek
         if defined?(BigDecimal)
           BigDecimal(value)
         else
-          value.to_f
+          value.to_i.to_s == value.to_s ? value.to_i : value.to_f
         end
       end
 
